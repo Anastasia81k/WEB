@@ -1,0 +1,9 @@
+<!-- Messages Partial Template -->
+<div class="container">
+    <% if(message){ %>
+
+            <span  onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong><%= message.name%> </strong><strong><%= message.surname%></strong>
+
+    <% } %>
+</div>

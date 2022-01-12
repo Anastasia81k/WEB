@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+<%- include('../template/nav')-%>
+
+<div class="container">
+    <div class="card-content">
+        <ul class="collection with-header">
+            <% links.forEach(function(entry) {%>
+                <li class="collection-item"><a href="<%= entry.url%>" ><%=entry.name%></a></li>
+            <%});%>
+        </ul>
+    </div>
+</div>
+
+<div class="container">
+    <div class="card-content">
+        <p style="text-align: justify; font-size: 20px">Мнoгие люди скaжyт, что лошади — очень кpасивые животные, но многие ли из ниx понимают, что в мире насчитывается несколько сотен различных пород лошадей? И некоторые из них имеют существенные отличия. Для многих же обычная крестьянская лошадь является самой красивой породой, некоторые же предпочитают более изысканные породы.</p>
+        <p style="text-align: justify; font-size: 20px">Пpинятo считaть, что самыми красивыми в мире являются три породы: Аxалтекинская, Арабская и Фризская; и на рынке некоторые из них могyт стоить дороже нового премиального спорткара. О них и о многих других лошадях и пойдёт речь в этой статье. Сядьте поудобнее и наслаждайтесь этими четвероногими красавцами.</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col s12 m7">
+        <h2 class="header">Интересные факты</h2>
+        <h4 class="header">Влияние лошадей на опорно-двигательный аппарат </h4>
+        <div class="card horizontal">
+            <div class="card-image" style="height: 50px; width: 250px">
+                <img src="data:image/jpeg;base64,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">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p >Лошадь во многом влияет на опорно-двигательный аппарат. Она с каждым шагом передает всаднику импульс, точно повторяющий работу туловища человека при ходьбе. Это свидетельствует об уникальности устранения проблем с позвоночником. Так, лошадей используют для двигательной терапии и гимнастики, в частности данные курсы реабилитации проходят дети..</p>
+                </div>
+                <div class="card-action">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+<div class="container">
+
+    <div class="col s12 m7">
+        <h4 class="header">Окрас лошади </h4>
+        <div class="card horizontal">
+            <div class="card-image" style="height: 50px; width: 250px">
+                <img src="https://s61.radikal.ru/i174/1206/f8/648ec874eadd.jpg">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p>Окрас лошади влияет на её характер. Утверждение это спорное. С одной стороны, если начать сравнивать с человеком, то оно является ложным, ведь цвет волос не отражает твоих индивидуальных особенностей и склонностей. С другой стороны, люди, которые постоянно работают с лошадями, утверждают, что чёрные лошади наиболее быстры, выносливы и лучше переносят различные заболевания. Некоторые говорят, что рыжие лошади имеют очень нестабильный характер. </p></div>
+                <div class="card-action">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="container">
+
+    <div class="col s12 m7">
+        <h4 class="header">Копыта лошадей </h4>
+        <div class="card horizontal">
+            <div class="card-image" style="height: 50px; width: 250px">
+                <img src="http://100facts.ru/wp-content/uploads/2013/02/134374364017.jpg">
+            </div>
+            <div class="card-stacked">
+                <div class="card-content">
+                    <p>Интересно, что копыто является не только самой чувствительной частью тела у лошади, но и отвечает за циркуляцию крови. Прикладываемая к нему сила тяжести заставляет кровь перемещаться вверх по сосудам.</p><div class="card-action">
+
+                </div>
+                    <div class="card-action">
+
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+</body>
+</html>
+

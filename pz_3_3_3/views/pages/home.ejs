@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body>
+
+
+
+<%- include('../template/nav')-%>
+
+<div class="carousel">
+    <a class="carousel-item" style="height: 350px; width: 500px" href="#one!" ><img src="https://agrostory.com/upload/resize_cache/iblock/db8/300_300_1/db842560981b0626ff30dc457e46af8a.jpg"></a>
+    <a class="carousel-item" style="height: 350px; width: 500px" href="#two!"><img src="https://o-prirode.ru/wp-content/uploads/2019/03/loshad-1024x640.jpg"></a>
+    <a class="carousel-item" style="height: 350px; width: 500px" href="#three!"><img src="https://bipbap.ru/wp-content/uploads/2017/05/foto_krasivyx_loshadej_05.jpg"></a>
+    <a class="carousel-item" style="height: 350px; width: 500px" href="#four!"><img src="https://most-beauty.ru/wp-content/uploads/2016/09/TOP-samyh-krasivyh-loshadej.jpg"></a>
+    <a class="carousel-item" style="height: 350px; width: 500px" href="#five!"><img src="https://мтв.онлайн/files/2019/31676-119814-7869-f9c1yi.ww155.jpg"></a>
+</div>
+
+<div class="container">
+    <div class="card-content">
+        <p style="text-align: justify; font-size: 20px">Лошадь — животное, имеющее едва ли не самую значительную роль в человеческой истории. Лошади всегда были верными помощниками и друзьями для многих сотен поколений людей, и кто знает, где мы были бы сейчас, если бы не они? И пусть технический прогресс вытеснил лошадей из многих сфер их применения, они от этого не становятся менее удивительными созданиями.</p> </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        //find wich slide is the middle one
+        var carousel_items = document.querySelectorAll('.carousel-item').length;
+        var middle_slide = Math.round(carousel_items / 2)
+
+        console.log('The slide in the middle is the ' + middle_slide + ' out of ' + carousel_items)
+
+        //Carousel initialization
+        var options = {};
+        var elems = document.querySelectorAll('.carousel');
+        var instances = M.Carousel.init(elems, options);
+
+        //Set the carousel to show the middle slide first
+        var elem = document.querySelector('.carousel');
+        var instance = M.Carousel.getInstance(elem);
+        instance.set(middle_slide);
+    })
+
+</script>
+
+</body>
+</html>
+
